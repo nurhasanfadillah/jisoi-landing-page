@@ -12,10 +12,16 @@ export function FloatingCTA() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setVisible(window.scrollY > 400)
+      if (window.scrollY > 600) setVisible(true)
     }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    // Small delay to avoid flash on load
+    const timer = setTimeout(() => {
+      window.addEventListener("scroll", handleScroll)
+    }, 2000)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   return (
