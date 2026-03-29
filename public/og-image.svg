@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F0F1A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="200" cy="315" r="150" fill="#E94560" opacity="0.1"/>
+  <circle cx="1000" cy="315" r="150" fill="#25D366" opacity="0.1"/>
+  <text x="600" y="250" text-anchor="middle" fill="#E94560" font-family="Arial,sans-serif" font-size="20" font-weight="bold">JISOI</text>
+  <text x="600" y="310" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="42" font-weight="bold">Tas Custom, Harga Pabrik Langsung</text>
+  <text x="600" y="370" text-anchor="middle" fill="#ffffff90" font-family="Arial,sans-serif" font-size="22">Produksi sendiri • MOQ 10 pcs • 30.000+ pcs/bulan</text>
+  <rect x="480" y="420" width="240" height="50" rx="12" fill="#25D366"/>
+  <text x="600" y="452" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="18" font-weight="bold">Konsultasi Gratis</text>
+</svg>
