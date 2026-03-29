@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { MessageCircle, Star } from "lucide-react"
 import Image from "next/image"
-import { products, formatPrice } from "@/lib/products"
+import { products } from "@/lib/products"
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/whatsapp"
 import { events } from "@/lib/analytics"
 
@@ -85,9 +85,9 @@ export function ProdukShowcase() {
                   {product.description}
                 </p>
                 <div className="flex items-center justify-between mt-3">
-                  <p className="text-sm font-bold text-[#1A1A2E] dark:text-white">
-                    Mulai {formatPrice(product.priceFrom)}
-                  </p>
+                  <span className="text-xs text-gray-400 dark:text-white/40">
+                    MOQ 10 pcs
+                  </span>
                   <a
                     href={generateWhatsAppLink(
                       whatsappMessages.produk(product.name)
@@ -99,7 +99,7 @@ export function ProdukShowcase() {
                       events.ctaClick("produk", `Tanya Harga ${product.name}`)
                       events.whatsappClick("produk")
                     }}
-                    className="flex items-center gap-1 text-xs font-medium text-[#25D366] hover:text-[#20BD5A] transition-colors"
+                    className="flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-white bg-[#25D366] hover:bg-[#20BD5A] rounded-full transition-colors"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
                     Tanya Harga

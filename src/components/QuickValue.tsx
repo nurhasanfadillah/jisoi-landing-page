@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Factory, Package, TrendingUp, ShieldCheck } from "lucide-react"
+import { Factory, Layers, Zap, BadgeCheck } from "lucide-react"
 
 const values = [
   {
@@ -10,17 +10,17 @@ const values = [
     desc: "Bukan makelar, harga pabrik langsung",
   },
   {
-    icon: Package,
+    icon: Layers,
     title: "MOQ 10 Pcs",
     desc: "Order kecil tetap kita layani",
   },
   {
-    icon: TrendingUp,
+    icon: Zap,
     title: "30.000+ pcs/Bulan",
     desc: "Kapasitas besar, siap order partai",
   },
   {
-    icon: ShieldCheck,
+    icon: BadgeCheck,
     title: "QC Ketat",
     desc: "Setiap pcs dicek sebelum kirim",
   },

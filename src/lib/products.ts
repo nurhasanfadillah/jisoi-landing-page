@@ -1,7 +1,6 @@
 export interface Product {
   id: string
   name: string
-  priceFrom: number
   image: string
   category: string
   bestSeller?: boolean
@@ -12,25 +11,22 @@ export const products: Product[] = [
   {
     id: "cluta",
     name: "Clutch",
-    priceFrom: 12500,
-    image: "/products/cluta.svg",
+    image: "/products/cluta.png",
     category: "Souvenir",
     bestSeller: true,
     description: "Souvenir elegan, cocok untuk event & wedding",
   },
   {
-    id: "pouch",
-    name: "Pouch / Ransel",
-    priceFrom: 11500,
-    image: "/products/pouch.svg",
+    id: "axelo",
+    name: "Pouch",
+    image: "/products/axelo.png",
     category: "Merchandise",
     description: "Budget friendly, serbaguna untuk corporate gift",
   },
   {
-    id: "handbag",
+    id: "apenta",
     name: "Handbag Premium",
-    priceFrom: 34000,
-    image: "/products/handbag.svg",
+    image: "/products/apenta.png",
     category: "Premium",
     bestSeller: true,
     description: "Best seller, cocok untuk merchandise brand",
@@ -38,34 +34,43 @@ export const products: Product[] = [
   {
     id: "selempang",
     name: "Tas Selempang",
-    priceFrom: 18000,
-    image: "/products/selempang.svg",
+    image: "/products/selempang.png",
     category: "Serbaguna",
     description: "Unisex, practical untuk brand activation",
   },
   {
-    id: "serut",
+    id: "aruma",
     name: "Tas Serut",
-    priceFrom: 11000,
-    image: "/products/serut.svg",
+    image: "/products/aruma.png",
     category: "Goodie Bag",
     description: "Goodie bag favorit, ringan & murah",
   },
   {
-    id: "backpack",
+    id: "bagpack",
     name: "Backpack",
-    priceFrom: 32500,
-    image: "/products/backpack.svg",
+    image: "/products/bagpack.png",
     category: "Premium",
     description: "Corporate gift & seminar kit premium",
   },
+  {
+    id: "athae",
+    name: "Waist Bag",
+    image: "/products/athae.png",
+    category: "Trend",
+    description: "Compact & stylish, cocok untuk brand streetwear",
+  },
+  {
+    id: "taslaptop",
+    name: "Tas Laptop",
+    image: "/products/taslaptop.png",
+    category: "Functional",
+    description: "Proteksi maksimal, desain profesional",
+  },
+  {
+    id: "waistbag",
+    name: "Tote Bag",
+    image: "/products/waistbag.png",
+    category: "Everyday",
+    description: "Ramah lingkungan, cocok untuk shopping bag brand",
+  },
 ]
-
-export function formatPrice(price: number): string {
-  return new Intl.NumberFormat("id-ID", {
-    style: "currency",
-    currency: "IDR",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(price)
-}
