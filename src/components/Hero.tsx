@@ -8,10 +8,10 @@ import { events } from "@/lib/analytics"
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0F0F1A] via-[#1A1A2E] to-[#16213E]">
-      {/* Animated gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-[radial-gradient(circle,rgba(233,69,96,0.15)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-[radial-gradient(circle,rgba(37,211,102,0.1)_0%,transparent_50%)] animate-pulse delay-1000" />
+      {/* Animated gradient orbs — positioned to NOT cover center CTA area */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-[60%] h-[60%] bg-[radial-gradient(circle,rgba(233,69,96,0.12)_0%,transparent_70%)] animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-[60%] h-[60%] bg-[radial-gradient(circle,rgba(37,211,102,0.08)_0%,transparent_70%)] animate-pulse delay-1000" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
@@ -81,21 +81,6 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator — hidden on mobile to avoid CTA overlap */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 hidden md:block"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1"
-        >
-          <div className="w-1.5 h-3 rounded-full bg-white/50" />
-        </motion.div>
-      </motion.div>
     </section>
   )
 }
